@@ -66,7 +66,7 @@ The 2♦️ can be used to repair up to two points of damage on your equipped sh
 
 Balance
 -------
-As-designed, Rascal is pretty winnable; no, not every dungeon can be beaten, and mis-steps are often costly, but if you're making good choices about conserving resources, etc. you win a lot of the time.  That's how I like it.  There are also many ways you can tune the game; a few ideas follow.
+As-designed, Rascal is pretty winnable; not every dungeon can be beaten, and mis-steps are often costly, but if you're making good choices about conserving resources, etc. you win a lot of the time.  That's how I like it.  There are also many ways you can tune the game; a few ideas follow.
 
 ### Pull Cards
 The deck is already literally stacked against you; when you think about it, that means that pulling red cards (especially ♦️) will make it harder to win, moreso than removing black cards will make it easer.
