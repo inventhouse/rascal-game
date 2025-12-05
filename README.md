@@ -59,7 +59,7 @@ Special Rules
 -------------
 
 ### Inventory
-You also have one inventory slot, however you cannot access it (either to store or retrieve an item) when any monsters are present; any item in inventory must be used or discarded when replacing with another item from the room.
+You also have one inventory slot, however you cannot access it (either to store or retrieve an item) when any monsters are present; an item may be used directly from the inventory slot or, if there is space in the room, it can be dropped and treated as a room card.
 
 ### Repair
 The 2♦️ can be used to repair up to two points of damage on your equipped shield; discard the 2♦️ and up to two monsters from your shield stack.
@@ -76,7 +76,7 @@ On the flip-side, using another mechanism for a life-counter and adding a high-v
 ### Tweak Special Rules
 Dropping the "repair" rule or even pulling the 2♦️ out of the deck would make the game harder; though it seems of minimal value (which is why I added the repair rule), it means one less monster in a room, which can make all the difference.
 
-Dropping the inventory rule would force more discards of mid-value items.  Or, relaxing some of the inventory constraints could make it easier: allow swapping the equipped shield with one in inventory, enable "dropping" so an item can carry-over to the next room, access even if a monster is carrying over, or even access during combat.
+Dropping the inventory rule would force more discards of mid-value items.  Or, relaxing some of the inventory constraints could make it easier: allow swapping the equipped shield with one in inventory, access even if a monster is carrying over, or even access during combat.
 
 ### Other Tweaks
 - Change the "fight or flee" rule

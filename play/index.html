@@ -532,7 +532,7 @@
 
     <script>
         // Version
-        const VERSION = 'v1.5.5';
+        const VERSION = 'v1.6.0';
 
         // Card suit symbols
         const SUITS = {
@@ -990,6 +990,17 @@
                         modal.classList.remove('active');
                     }));
                 }
+            }
+
+            // Drop to room (if there's space)
+            if (gameState.room.length < 4) {
+                buttons.appendChild(createActionButton('Drop to Room', 'btn-secondary', () => {
+                    gameState.room.push(card);
+                    gameState.inventory = null;
+                    showMessage('Dropped item into the room.');
+                    updateUI();
+                    modal.classList.remove('active');
+                }));
             }
 
             buttons.appendChild(createActionButton('Discard', 'btn-danger', () => {
