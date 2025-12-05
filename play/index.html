@@ -532,7 +532,7 @@
 
     <script>
         // Version
-        const VERSION = 'v1.5.4';
+        const VERSION = 'v1.5.5';
 
         // Card suit symbols
         const SUITS = {
@@ -1107,7 +1107,7 @@
 
             // Check if this is a flee scenario
             const canFleeNow = !gameState.roomTouched && gameState.canFlee && gameState.room.length === 4;
-            const canAdvance = gameState.room.length === 1;
+            const canAdvance = gameState.room.length === 1 && gameState.deck.length > 0;
 
             if (canFleeNow) {
                 nextRoomBtn.textContent = 'Flee Room';
