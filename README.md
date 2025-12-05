@@ -59,7 +59,7 @@ Special Rules
 -------------
 
 ### Inventory
-You also have one inventory slot, however you cannot access it (either to store or retrieve an item) when any monsters are present; an item may be used directly from the inventory slot or, if there is space in the room, it can be dropped and treated as a room card.
+You also have one inventory slot, however you cannot access it (either to store or retrieve/use an item) when any monsters are present; an item may be used directly from the inventory slot or, if there is space in the room, it can be dropped and treated as a room card.
 
 ### Repair
 The 2♦️ can be used to repair up to two points of damage on your equipped shield; discard the 2♦️ and up to two monsters from your shield stack.
