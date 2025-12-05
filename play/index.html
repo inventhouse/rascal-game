@@ -532,7 +532,7 @@
 
     <script>
         // Version
-        const VERSION = 'v1.5.3';
+        const VERSION = 'v1.5.4';
 
         // Card suit symbols
         const SUITS = {
@@ -685,6 +685,14 @@
             } else if (card.type === 'shield') {
                 title.textContent = `Shield (${card.numValue} defense)`;
 
+                // Repair shield (if 2 of diamonds) - show first when available
+                if (card.value === '2' && gameState.shield && gameState.shieldDamage > 0) {
+                    buttons.appendChild(createActionButton('Repair Shield', 'btn-primary', () => {
+                        repairShield(index);
+                        modal.classList.remove('active');
+                    }));
+                }
+
                 // Equip shield
                 buttons.appendChild(createActionButton('Equip Shield', 'btn-success', () => {
                     equipShield(index);
@@ -695,14 +703,6 @@
                 if (!hasMonsters() && !gameState.inventory) {
                     buttons.appendChild(createActionButton('Store in Inventory', 'btn-secondary', () => {
                         storeInInventory(index);
-                        modal.classList.remove('active');
-                    }));
-                }
-
-                // Repair shield (if 2 of diamonds)
-                if (card.value === '2' && gameState.shield && gameState.shieldDamage > 0) {
-                    buttons.appendChild(createActionButton('Repair Shield', 'btn-primary', () => {
-                        repairShield(index);
                         modal.classList.remove('active');
                     }));
                 }
@@ -954,6 +954,19 @@
             buttons.innerHTML = '';
 
             if (card.type === 'shield') {
+                // Repair shield (if 2 of diamonds) - show first when available
+                if (card.value === '2' && gameState.shield && gameState.shieldDamage > 0) {
+                    buttons.appendChild(createActionButton('Repair Shield', 'btn-primary', () => {
+                        const repairAmount = Math.min(2, gameState.shieldDamage);
+                        gameState.shieldDamage -= repairAmount;
+                        gameState.inventory = null;
+                        gameState.discard.push(card);
+                        showMessage(`Repaired ${repairAmount} points of shield damage!`, 'success');
+                        updateUI();
+                        modal.classList.remove('active');
+                    }));
+                }
+
                 buttons.appendChild(createActionButton('Equip Shield', 'btn-success', () => {
                     if (gameState.shield) {
                         gameState.discard.push(gameState.shield);
