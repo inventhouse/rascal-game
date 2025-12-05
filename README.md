@@ -17,14 +17,16 @@ Aside, tweaking or outright re-working game rules like this is a lot of fun, I'v
 
 Setup
 -----
-Start with a standard 52-card deck (jokers are not used), separate high red cards (J,Q,K,A ♦️/♥️); these can be used as the "life counter" by assigning 1-4 to J-A (1+2+3+4 = 10 x 2 suits = 20 life), turning them face-down when points are lost and face-up when they are restored or to "make change" as needed.
+Start with a standard 52-card deck (jokers are not used), separate high red cards (J,Q,K,A ♦️/♥️); these can be used as the "life counter" by assigning 1-4 to J-A (1+2+3+4 = 10 x 2 suits = 20 life.)
 
-When damage is taken turn the appropriate value of life points face down; when life points are restored, turn that value back face-up.  Life points can never go above 20; if they ever go below one, the game is lost.
+When damage is taken turn the appropriate value of life points face down; when life points are restored, turn that value back face-up.  "Make change" as needed.
+
+Life points can never go above 20; if they ever go below one, the game is lost.
 
 Thoroughly shuffle remaining cards (2-A ♣️/♠️, 2-10 ♦️/♥️); this will be the "dungeon" where:
-- Black cards (♣️/♠️) are monsters and do damage equal to their value (2-A = 2-14).
-- Diamonds (♦️) are shields which prevent damage based on their value, but degrade a point with each use.  You can have only one shield equipped a time.
-- Hearts (♥️) are healing potions and restore life points up to their value, up to the starting life of 20, but only one potion per round ("room") is effective.
+- ♣️/♠️ are monsters and do damage equal to their value (2-A = 2-14).
+- ♦️ are shields which prevent damage based on their value, but degrade a point with each use.  You can have only one shield equipped a time.
+- ♥️ are healing potions and restore life points up to their value, up to the starting life of 20, but only one potion per round ("room") is effective.
 
 Layout is up to you and/or the space you are playing; you will need to have a place for the dungeon deck face-down, your life counter, four room cards face-up, a discard pile, an equipped shield stack, and an inventory item.  Here is one example:
 
@@ -46,7 +48,7 @@ Upon "entering" a room, you may choose to fight or flee; if you flee, all four r
 
 If you fight, cards may be dealt with in any order, but only one at a time:
 - ♦️ When equipping a shield, any previously held shield must be discarded.
-- ♣️/♠️ Fighting a monster can be done with or without your equipped shield and damage is deducted from life points immediately.  Fighting barehanded, you take the full damage and discard the monster.  Fighting with your shield deducts the shield's current value from the damage taken (face value minus the number of previously vanquished monsters) but degrades the shield by a point; place the monster on the shield card to help track its degraded value.
+- ♣️/♠️ Fighting a monster can be done with or without your equipped shield and damage is deducted from life points immediately.  Fighting with your shield deducts the shield's current value from the damage taken (face value minus the number of previously vanquished monsters) but degrades the shield by a point; place the monster on the shield card to help track its degraded value.  Fighting barehanded, you take the full damage and discard the monster.
 - ♥️ Taking a healing potion restores life points immediately and is discarded; again, only one potion per room is restorative.
 
 Shields or potions in the room may also simply be discarded.
@@ -83,3 +85,4 @@ Dropping the inventory rule would force more discards of mid-value items.  Or, r
 - Increase or decrease life points
 - Alter shield degradation rate or process
 - Add random elements, such as a die roll for which monster to fight
+- Add a special, say, lightning bolt you can use once to slay a monster

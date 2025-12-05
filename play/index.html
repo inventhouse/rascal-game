@@ -532,7 +532,7 @@
 
     <script>
         // Version
-        const VERSION = 'v1.6.1';
+        const VERSION = 'v1.6.2';
 
         // Card suit symbols
         const SUITS = {
@@ -771,7 +771,17 @@
                 damage = Math.max(0, damage - shieldValue);
                 gameState.shieldDamage++;
 
-                if (damage > 0) {
+                // Check if shield is broken
+                if (gameState.shieldDamage >= gameState.shield.numValue) {
+                    gameState.discard.push(gameState.shield);
+                    gameState.shield = null;
+                    gameState.shieldDamage = 0;
+                    if (damage > 0) {
+                        showMessage(`Shield broke! You took ${damage} damage.`, 'error');
+                    } else {
+                        showMessage(`Shield absorbed the blow but broke!`, 'warning');
+                    }
+                } else if (damage > 0) {
                     showMessage(`Shield absorbed ${shieldValue} damage! You took ${damage} damage.`, 'warning');
                 } else {
                     showMessage(`Shield absorbed all damage!`, 'success');
