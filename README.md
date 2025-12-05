@@ -5,7 +5,9 @@ _A [Scoundrel] Variant_
 Original by Zach Gage and Kurt Bieg  
 This version and app by Benjamin Holt © 2025 MIT or CC-BY License
 
-[Scoundrel] ([BGG]) is a brilliant dungeon-crawling [roguelike] solitaire card game concept; however it has some mechanics that make outcome depend on luck at least as much as player choices, which I don't care for.  I also feel like the concept all-but-demands an "inventory", so I developed this variant; aside, tweaking or outright re-working game rules like this is a lot of fun, I've included some tuning ideas below.
+[Scoundrel] ([BGG]) is a brilliant dungeon-crawling [roguelike] solitaire card game concept, however it has some mechanics that make outcome depend on luck at least as much as player choices, which I don't care for.  I also feel like the concept all-but-demands an "inventory", so I developed this variant.
+
+Aside, tweaking or outright re-working game rules like this is a lot of fun, I've included some tuning ideas below.
 
 [Scoundrel]: http://stfj.net/art/2011/Scoundrel.pdf
 [BGG]: https://boardgamegeek.com/boardgame/191095/scoundrel
