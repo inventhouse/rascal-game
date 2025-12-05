@@ -443,7 +443,7 @@
 
             <div class="equipment-section">
                 <div class="equipment-slot">
-                    <h4>Equipped Shield</h4>
+                    <h4>Shield</h4>
                     <div id="shieldSlot" class="equipment-card">
                         <div class="card empty">No Shield</div>
                     </div>
@@ -960,7 +960,7 @@
             const buttons = document.getElementById('actionModalButtons');
 
             const shieldValue = Math.max(0, gameState.shield.numValue - gameState.shieldDamage);
-            title.textContent = `Equipped Shield (${shieldValue} defense)`;
+            title.textContent = `Shield (${shieldValue} defense)`;
             cardDisplay.innerHTML = renderCard(gameState.shield, -1);
             buttons.innerHTML = '';
 
