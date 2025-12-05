@@ -381,6 +381,37 @@
             }
         }
 
+        .info-button {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #4fc3f7;
+            font-size: 1.8rem;
+            font-weight: bold;
+            font-style: italic;
+            font-family: Georgia, serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+
+        .info-button:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.1);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+            color: #81d4fa;
+        }
+
         .action-modal {
             display: none;
             position: fixed;
@@ -423,6 +454,7 @@
     </style>
 </head>
 <body>
+    <a href="../" class="info-button" title="Rules & Info">i</a>
     <div class="game-container">
         <h1>🎴 Rascal</h1>
 
