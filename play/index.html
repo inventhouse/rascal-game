@@ -532,7 +532,7 @@
 
     <script>
         // Version
-        const VERSION = 'v1.6.4';
+        const VERSION = 'v1.6.5';
 
         // Card suit symbols
         const SUITS = {
@@ -700,7 +700,7 @@
                 }));
 
                 // Store in inventory
-                if (!hasMonsters() && (!gameState.inventory || gameState.room.length < 4)) {
+                if (!hasMonsters()) {
                     buttons.appendChild(createActionButton('Store in Inventory', 'btn-secondary', () => {
                         storeInInventory(index);
                         modal.classList.remove('active');
@@ -724,7 +724,7 @@
                 }
 
                 // Store in inventory
-                if (!hasMonsters() && (!gameState.inventory || gameState.room.length < 4)) {
+                if (!hasMonsters()) {
                     buttons.appendChild(createActionButton('Store in Inventory', 'btn-secondary', () => {
                         storeInInventory(index);
                         modal.classList.remove('active');
