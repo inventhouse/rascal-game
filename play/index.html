@@ -532,7 +532,7 @@
 
     <script>
         // Version
-        const VERSION = 'v1.6.3';
+        const VERSION = 'v1.6.4';
 
         // Card suit symbols
         const SUITS = {
@@ -700,7 +700,7 @@
                 }));
 
                 // Store in inventory
-                if (!hasMonsters() && !gameState.inventory) {
+                if (!hasMonsters() && (!gameState.inventory || gameState.room.length < 4)) {
                     buttons.appendChild(createActionButton('Store in Inventory', 'btn-secondary', () => {
                         storeInInventory(index);
                         modal.classList.remove('active');
@@ -724,7 +724,7 @@
                 }
 
                 // Store in inventory
-                if (!hasMonsters() && !gameState.inventory) {
+                if (!hasMonsters() && (!gameState.inventory || gameState.room.length < 4)) {
                     buttons.appendChild(createActionButton('Store in Inventory', 'btn-secondary', () => {
                         storeInInventory(index);
                         modal.classList.remove('active');
@@ -828,13 +828,18 @@
         // Store in inventory
         function storeInInventory(index) {
             gameState.roomTouched = true;
+            const newItem = gameState.room[index];
+
             if (gameState.inventory) {
-                gameState.discard.push(gameState.inventory);
-                showMessage(`Previous item discarded.`);
+                const oldItem = gameState.inventory;
+                gameState.room.push(oldItem);
+                gameState.inventory = newItem;
+                showMessage(`Swapped ${newItem.value}${newItem.symbol} into inventory, ${oldItem.value}${oldItem.symbol} to room.`, 'success');
+            } else {
+                gameState.inventory = newItem;
+                showMessage(`Stored ${newItem.value}${newItem.symbol} in inventory!`, 'success');
             }
 
-            gameState.inventory = gameState.room[index];
-            showMessage(`Stored ${gameState.inventory.value}${gameState.inventory.symbol} in inventory!`, 'success');
             removeRoomCard(index);
         }
 
