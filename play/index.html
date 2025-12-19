@@ -532,7 +532,7 @@
 
     <script>
         // Version
-        const VERSION = 'v1.6.2';
+        const VERSION = 'v1.6.3';
 
         // Card suit symbols
         const SUITS = {
@@ -885,6 +885,9 @@
 
         // Check if room is complete
         function checkRoomComplete() {
+            // Don't check for victory if player has already died
+            if (gameState.gameOver) return;
+
             if (gameState.room.length === 1) {
                 showMessage('One card remains. You can advance to the next room!', 'success');
             } else if (gameState.room.length === 0) {
